@@ -7,5 +7,6 @@ RUN apt-get install wget openjdk-7-jre-headless -y --force-yes
 RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.10.deb
 RUN dpkg -i elasticsearch-0.90.10.deb
 RUN rm elasticsearch-0.90.10.deb
+EXPOSE 9200
 ## start elasticsearch
 ENTRYPOINT  ["service elasticsearch start"]
